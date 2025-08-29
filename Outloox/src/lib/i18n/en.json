@@ -1,0 +1,89 @@
+
+{
+  "header": {
+    "title": "Outloox",
+    "home": "Home",
+    "dashboard": "Accounts",
+    "contact": "Contact",
+    "docs": "Docs",
+    "news": "News"
+  },
+  "landing": {
+    "title": "Say Goodbye to Paid Subscriptions",
+    "description": "We provide you with public and accessible accounts for the most popular services. Enjoy premium features without having to pay again.",
+    "get_started": "Explore Accounts"
+  },
+  "home": {
+    "title": "Public Accounts",
+    "description": "Here is a list of publicly available accounts. Expand any account to see more details.",
+    "noAccounts": "No accounts found.",
+    "noAccounts_desc": "New accounts are added constantly. Please check back soon!",
+    "error": "Failed to load accounts.",
+    "error_desc": "There was an issue connecting to the database. Please try again later.",
+    "email": "Email",
+    "password": "Password",
+    "name": "Account Name",
+    "country": "Country",
+    "services": "Linked Services",
+    "posted_today": "Posted Today",
+    "posted_previously": "Posted Previously",
+    "report_account": "Report an Issue",
+    "reported": "Reported",
+    "reporting": "Reporting...",
+    "report_success_title": "Report Received",
+    "report_error_title": "Report Failed",
+    "report_success_message": "Thanks for the feedback. You've helped us improve the service.",
+    "report_limit_message": "Thank you. This account has been reported multiple times and will be removed soon.",
+    "copied_to_clipboard": "Copied to clipboard!"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "Have a question or feedback? Fill out the form below. Your message will be sent directly to our Telegram.",
+    "name": "Name",
+    "name_placeholder": "Your Name",
+    "email": "Email",
+    "email_placeholder": "your.email@example.com",
+    "message": "Message",
+    "message_placeholder": "Your message here...",
+    "submit": "Send Message",
+    "submitting": "Sending...",
+    "success_title": "Message Sent!",
+    "success_message": "Thank you for your message. We have received it.",
+    "error_title": "Error",
+    "error_message": "An unexpected error occurred. Please try again."
+  },
+  "docs": {
+    "title": "Docs & Help Center",
+    "description": "Everything you need to get started using our shared accounts effectively and safely.",
+    "login": {
+      "title": "How to Login",
+      "description": "Follow these simple steps to log into any Outlook account.",
+      "step1": "Go to the official Outlook.com website.",
+      "step2": "Enter the provided email and password.",
+      "step3": "You might be asked for a security check. This is normal.",
+      "step4": "Congratulations! You are now in the account."
+    },
+    "mail_access": {
+      "title": "Mail Access",
+      "description": "All accounts provided on our site come with full access to the Outlook inbox. This means you can use the email to receive verification messages and sign up for other services."
+    },
+    "disclaimer": {
+      "title": "Linked Services Accuracy",
+      "description": "The 'Linked Services' feature shown for each account works by scanning the inbox for messages from known services (like Netflix, Spotify). This feature is not 100% accurate and may not show all actual subscriptions, especially if emails have been deleted."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1_title": "Is it safe to use these accounts?",
+      "q1_answer": "Yes, the accounts are safe for public use. However, we do not recommend storing any personal or sensitive information on them as they are shared accounts.",
+      "q2_title": "Why was I logged out of the account?",
+      "q2_answer": "You may be automatically logged out if another user signs in or if Microsoft performs a security check. Simply log in again.",
+      "q3_title": "How are new accounts added?",
+      "q3_answer": "Our team constantly searches for publicly available accounts and adds them to our database to ensure a wide range of options."
+    }
+  },
+  "footer": {
+    "disclaimer_title": "Disclaimer",
+    "disclaimer_text": "The accounts listed are for educational and testing purposes only. All accounts are sourced from public domains.",
+    "rights_reserved": "All rights reserved."
+  }
+}

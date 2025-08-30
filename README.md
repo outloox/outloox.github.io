@@ -1,4 +1,4 @@
 # Outloox
 
-You are not authorized as a regular user to access this repository.
-You Can Contact Developper On : t.me/57c_k
+🚫 You are not authorized to access this repository.  
+📩 Contact developer: [t.me/waterflame7](https://t.me/waterflame7)

@@ -3,7 +3,7 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Or your default branch
+      - main
 
 jobs:
   build-and-deploy:
@@ -24,9 +24,6 @@ jobs:
       - name: Build 🏗️
         run: npm run build
 
-      - name: Export Static Site 🌐
-        run: npx next export
-
       - name: Add .nojekyll file
         run: touch ./out/.nojekyll
 
@@ -35,4 +32,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
-          # cname: outloox.github.io # Uncomment if you are using a custom domain

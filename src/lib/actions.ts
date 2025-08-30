@@ -1,5 +1,3 @@
-name: Build and Deploy to GitHub Pages
-
 on:
   push:
     branches:

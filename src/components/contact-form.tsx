@@ -1,9 +1,9 @@
 "use client";
 
-import { useForm, useFormState } from "react-hook-form";
+import { useForm, useFormState as useReactHookFormState } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useFormState as useActionFormState } from "react-dom";
+import { useFormState } from "react-dom";
 import { useEffect } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -18,7 +18,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { submitContactForm } from "@/lib/actions";
 import type { Dictionary } from "@/lib/types";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";
@@ -34,6 +33,41 @@ const contactFormSchema = (dictionary: Dictionary['contact']) => z.object({
   message: z.string().min(10, { message: dictionary.error_message }),
 });
 
+// A new, self-contained function to send the form data to Telegram.
+// This runs on the client-side, making it compatible with static export.
+async function sendTelegramMessage(name: string, email: string, messageText: string) {
+    const contactBotToken = '7712257349:AAFY5feUQytjcbUJ443fySEx7SsqvLp1980';
+    const contactChatId = '6022061821';
+    const url = `https://api.telegram.org/bot${contactBotToken}/sendMessage`;
+
+    const telegramMessage = `
+*New Contact Form Submission*
+-----------------------------
+*Name:* ${name}
+*Email:* ${email}
+*Message:*
+${messageText}
+    `;
+
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                chat_id: contactChatId,
+                text: telegramMessage,
+                parse_mode: 'Markdown',
+            }),
+        });
+        const result = await response.json();
+        return result.ok;
+    } catch (error) {
+        console.error('Failed to send Telegram message:', error);
+        return false;
+    }
+}
+
+
 export function ContactForm({ dictionary, lang }: ContactFormProps) {
   const { toast } = useToast();
   const form = useForm<z.infer<ReturnType<typeof contactFormSchema>>>({
@@ -45,8 +79,32 @@ export function ContactForm({ dictionary, lang }: ContactFormProps) {
     },
   });
 
-  const [state, formAction] = useActionFormState(submitContactForm, null);
-  const { isSubmitting } = useFormState({ control: form.control });
+  const { isSubmitting } = useReactHookFormState({ control: form.control });
+
+  // This is the new form action. It's defined directly in the component.
+  const formAction = async (prevState: any, formData: FormData) => {
+    const validatedFields = contactFormSchema(dictionary).safeParse({
+        name: formData.get("name"),
+        email: formData.get("email"),
+        message: formData.get("message"),
+    });
+
+    if (!validatedFields.success) {
+        return { success: false, message: dictionary.error_message };
+    }
+
+    const { name, email, message } = validatedFields.data;
+
+    const telegramSuccess = await sendTelegramMessage(name, email, message);
+
+    if (telegramSuccess) {
+      return { success: true, message: dictionary.success_message };
+    } else {
+      return { success: false, message: dictionary.error_message };
+    }
+  };
+  
+  const [state, dispatchFormAction] = useFormState(formAction, null);
 
   useEffect(() => {
     if (!state) return;
@@ -76,8 +134,7 @@ export function ContactForm({ dictionary, lang }: ContactFormProps) {
             <Form {...form}>
             <form
               action={(formData) => {
-                formData.append('lang', lang);
-                form.handleSubmit(() => formAction(formData))();
+                form.handleSubmit(() => dispatchFormAction(formData))();
               }}
               className="space-y-6"
             >

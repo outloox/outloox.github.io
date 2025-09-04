@@ -64,7 +64,7 @@ export default async function DocsPage({
             </ol>
             <div className="mt-8 text-center">
                 <Button asChild size="lg">
-                    <Link href="https://t.me/CHK5277BOT" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://t.me/OutlooxBot" target="_blank" rel="noopener noreferrer">
                          <Send className="me-2 h-5 w-5"/> {docs.how_it_works.cta}
                     </Link>
                 </Button>

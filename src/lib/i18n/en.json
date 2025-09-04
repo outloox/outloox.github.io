@@ -1,0 +1,137 @@
+
+{
+  "header": {
+    "title": "Outloox",
+    "home": "Home",
+    "dashboard": "Accounts",
+    "contact": "Contact",
+    "docs": "Help Center",
+    "telegram": "Telegram"
+  },
+  "landing": {
+    "title": "Say Goodbye to Paid Subscriptions",
+    "description": "We provide you with public and accessible accounts for the most popular services. Enjoy premium features without having to pay again.",
+    "get_started": "Explore Accounts"
+  },
+  "home": {
+    "title": "Public Accounts",
+    "description": "Here is a list of publicly available accounts. Expand any account to see more details.",
+    "noAccounts": "No accounts found.",
+    "noAccounts_desc": "New accounts are added constantly. Please check back soon!",
+    "error": "Failed to load accounts.",
+    "error_desc": "There was an issue connecting to the database. Please try again later.",
+    "account_prefix": "Account",
+    "email": "Email",
+    "password": "Password",
+    "country": "Country",
+    "services": "Linked Services",
+    "posted_today": "Posted Today",
+    "posted_previously": "Posted Previously",
+    "report_account": "Report Issue",
+    "reported": "Reported",
+    "reporting": "Reporting...",
+    "report_success_title": "Report Received",
+    "report_error_title": "Report Failed",
+    "report_success_message": "Thanks for the feedback. You've helped us improve the service.",
+    "report_limit_message": "Thank you. This account has been reported multiple times and will be removed.",
+    "copied_to_clipboard": "Copied to clipboard!",
+    "services_toast_title": "Note on Linked Services",
+    "services_toast_message": "Our service detection isn't 100% accurate. We recommend exploring the account yourself to find all linked services.",
+    "copy_button": "Copy",
+    "copied_button": "Copied!",
+    "check_account_button": "Check Validity"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "Have a question or feedback? Fill out the form below and we will review your message.",
+    "name": "Name",
+    "name_placeholder": "Your Name",
+    "email": "Email",
+    "email_placeholder": "your.email@example.com",
+    "message": "Message",
+    "message_placeholder": "Your message here...",
+    "submit": "Send Message",
+    "submitting": "Sending...",
+    "success_title": "Message Sent!",
+    "success_message": "Thank you for your message. We have received it.",
+    "error_title": "Error",
+    "error_name_message": "Name is required.",
+    "error_email_message": "Invalid email address.",
+    "error_message_message": "Message must be at least 10 characters.",
+    "error_general_message": "An unexpected error occurred. Please try again."
+  },
+  "docs": {
+    "title": "Help Center",
+    "description": "Your complete guide to getting started with our site and services effectively and safely.",
+    "how_it_works": {
+      "title": "How It Works: 3 Simple Steps",
+      "step1": "Browse the available accounts on the main page.",
+      "step2": "Click the 'Check Validity' button for your desired account.",
+      "step3": "Our Telegram bot will instantly verify the account and send you the details if it's active.",
+      "cta": "Verify via Bot"
+    },
+    "safety_guide": {
+      "title": "Safety & Best Practices",
+      "description": "To ensure a smooth and secure experience for everyone, please follow these community guidelines:",
+      "point1": "Never change the password. This will result in an immediate ban from our service.",
+      "point2": "Do not store any personal or sensitive information on these accounts as they are public and shared.",
+      "point3": "All accounts come with full Outlook inbox access, which you can use for verifications and sign-ups."
+    },
+    "basics": {
+      "title": "Usage Basics",
+      "questions": {
+        "q1": {
+          "q": "What is the purpose of this site?",
+          "a": "We provide public, shared accounts with premium subscriptions for various services, allowing users to access features for free."
+        },
+        "q2": {
+          "q": "How do I get the account password?",
+          "a": "Click the 'Check Validity' button. Our system will verify the account is still active. If it is, the bot will send you the full details, including the password, directly on Telegram."
+        },
+        "q3": {
+          "q": "Is the service free?",
+          "a": "Yes, using the website and verifying accounts is completely free of charge."
+        },
+        "q4": {
+          "q": "Can I use the bot directly in Telegram?",
+          "a": "The bot's primary function is to act as a bridge from the website to ensure verified accounts are delivered. For the best experience, always use the website to browse and request accounts."
+        }
+      }
+    },
+    "verification_process": {
+      "title": "Verification Process",
+      "questions": {
+        "q1": {
+          "q": "What does the 'Check Validity' button do?",
+          "a": "This button sends a request to our system to check that the account is still working at this very moment. If it's valid, it gets sent to you immediately. This ensures you always get working accounts."
+        },
+        "q2": {
+          "q": "Are the accounts I receive secure?",
+          "a": "Yes, we use an automated checking system to verify account validity. None of your personal data is ever stored. The process is fully automated for efficiency and privacy."
+        }
+      }
+    },
+    "troubleshooting": {
+      "title": "Troubleshooting",
+      "questions": {
+        "q1": {
+          "q": "What should I do if an account doesn't work?",
+          "a": "Simply report the account using the 'Report Issue' button, and we will check it."
+        },
+        "q2": {
+          "q": "The bot said an account was 'no longer valid'. What does that mean?",
+          "a": "This means that at the moment of your request, the account was no longer accessible (e.g., password was changed or it was locked). This is the benefit of the instant-check system—it prevents you from getting bad credentials. Simply try a different account."
+        },
+        "q3": {
+          "q": "The website is not loading or is empty. What's wrong?",
+          "a": "If you encounter this issue, please try again after a few minutes. There might be a temporary high load on the servers or the account list is being updated."
+        }
+      }
+    }
+  },
+  "footer": {
+    "disclaimer_title": "Disclaimer",
+    "disclaimer_text": "This site is for educational purposes only and is not affiliated with any of the mentioned brands.",
+    "rights_reserved": "All rights reserved."
+  }
+}

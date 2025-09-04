@@ -1,0 +1,22 @@
+{
+  "rules": {
+    // This node stores secrets. It should NOT be readable or writable by anyone.
+    // You will set the secret value directly in the Firebase Console.
+    "secrets": {
+        "botSecret": {
+            ".read": false,
+            ".write": false
+        }
+    },
+    "accounts": {
+       ".read": true,
+       // Allow write only if a correct secret is provided as an auth token.
+       // This applies to your bot and your admin panel.
+       ".write": "auth != null && root.child('secrets/botSecret').val() === auth",
+       ".indexOn": ["createdAt"]
+    },
+    // Default rules: deny all read/write unless specified above.
+    ".read": false,
+    ".write": false
+  }
+}

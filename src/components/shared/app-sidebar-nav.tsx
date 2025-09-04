@@ -25,7 +25,7 @@ const navItems: NavItem[] = [
   { href: "/dashboard", label: "dashboard", icon: LayoutDashboard },
   { href: "/docs", label: "docs", icon: BookOpen },
   { href: "/contact", label: "contact", icon: MessageSquare },
-  { href: "https://t.me/CHK5277BOT", label: "telegram", icon: Send, external: true },
+  { href: "https://t.me/OutlooxBot", label: "telegram", icon: Send, external: true },
 ];
 
 type AppSidebarNavProps = {

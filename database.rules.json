@@ -1,0 +1,16 @@
+
+{
+  "rules": {
+    "accounts": {
+      ".read": true,
+      ".write": "auth != null && root.child('secrets/botSecret').val() === auth.token.sub",
+      ".indexOn": ["createdAt"]
+    },
+    "secrets": {
+      "botSecret": {
+        ".read": false,
+        ".write": false
+      }
+    }
+  }
+}
